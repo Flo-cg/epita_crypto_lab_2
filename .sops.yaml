@@ -1,0 +1,13 @@
+creation_rules:
+  - path_regex: secrets/prod/.*\.ya?ml$
+    key_groups:
+      - age:
+          - age19wpuyn5h3gh7t7yypq5mp90sm8x5rpa0msm8uau4hdeurtn79ers7xmv2r # alice
+          - age1p25j0wmlsn39ttl740kefntgz6k0n5034e3wake5tr8nn54agypsv8k5au # carol
+  - path_regex: secrets/dev/.*\.ya?ml$
+    encrypted_regex: '^(password|token|key|secret)$'
+    key_groups:
+      - age:
+          - age19wpuyn5h3gh7t7yypq5mp90sm8x5rpa0msm8uau4hdeurtn79ers7xmv2r # alice
+          - age1t65walr4pr20v68ae8edls6sl2ms70rxf703hxnachru50kywgvsynrdfk # bob
+          - age1p25j0wmlsn39ttl740kefntgz6k0n5034e3wake5tr8nn54agypsv8k5au # carol
